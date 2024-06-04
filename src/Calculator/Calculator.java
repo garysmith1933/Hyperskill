@@ -1,5 +1,6 @@
 package Calculator;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
@@ -23,5 +24,19 @@ public class Calculator {
         }
 
         System.out.println("Income: $" + totalSales);
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Staff expenses:");
+        int staffExpenses = scanner.nextInt();
+
+        System.out.println("Other expenses:");
+        int otherExpenses = scanner.nextInt();
+
+        int netIncome = totalSales - staffExpenses - otherExpenses;
+
+        System.out.println("Net income: " + netIncome);
+
     }
 }
